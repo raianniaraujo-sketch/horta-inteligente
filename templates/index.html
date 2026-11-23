@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang=" pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Horta Inteligente</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <header class="topo">
+            <h1>Horta Inteligente</h1>
+            <span>Monitoramento do cultivo</span>
+        </header>
+        <main class="container">
+            <section class= "Boas-vindas">
+                <h2>Olá, seja bem-vindo à sua horta.</h2>
+                <p> Acompanhe as condições do ambiente e cuide melhor das suas plantas.</p>
+            </section>
+            <section class="indicadores">
+                <h3>Temperatura</h3>
+                <p class="valor">{{ temperatura }}°C</p>
+                <span>Temperatura atual</span>
+            </section>
+            <div class="card umidade">
+                <h3>Umidade do solo</h3>
+                <p class="valor">{{ umidade }}%</p>
+                <span>Umidade atual</span>
+            </div>
+            <section class="status">
+                <h3>Status da horta</h3>
+                <p>Monitoramento inciado. Dados simulados. </p>
+                <p>Última atualização: {{ horario }}</p>
+            </section>
+                <section class="histórico">
+                    <h3>Histórico de registros</h3>
+                    <p> Os últimos registros de temperatura, umidade serão apresentados aqui..</p>
+                </section>
+        </main>
+        <footer>
+            <p>Horta inteligente| Projeto Acadêmico </p>
+        
+        </footer>
+        
+    </body>
+</html>
